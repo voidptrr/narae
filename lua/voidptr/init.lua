@@ -1,4 +1,4 @@
-require("voidptr.options")
-require("voidptr.keymaps")
-require("voidptr.lazy")
-require("voidptr.lsp")
+require("voidptr.core.options")
+require("voidptr.core.keymaps")
+require("voidptr.core.lazy")
+require("voidptr.core.lsp")

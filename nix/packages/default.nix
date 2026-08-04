@@ -27,6 +27,7 @@
           blink-cmp
           lualine-nvim
           nightfox-nvim
+          oil-nvim
         ])
         ++ [
           (pkgs.vimPlugins.nvim-treesitter.withPlugins (

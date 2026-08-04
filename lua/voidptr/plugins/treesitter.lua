@@ -9,7 +9,7 @@ return {
       "rust",
       "zig",
       "c",
-      "terraform"
+      "terraform",
     }
 
     local treesitter = require("nvim-treesitter")
@@ -29,8 +29,6 @@ return {
       pattern = languages,
       callback = function()
         pcall(vim.treesitter.start)
-        vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-        vim.wo[0][0].foldmethod = 'expr'
       end,
     })
   end,
