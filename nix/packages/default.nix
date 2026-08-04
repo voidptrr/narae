@@ -32,7 +32,6 @@
           (pkgs.vimPlugins.nvim-treesitter.withPlugins (
             parsers:
               with parsers; [
-                lua
                 nix
                 rust
                 zig
