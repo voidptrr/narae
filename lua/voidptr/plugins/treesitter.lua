@@ -8,13 +8,21 @@ return {
       "nix",
       "rust",
       "zig",
+      "c",
+      "terraform"
     }
 
     local treesitter = require("nvim-treesitter")
     treesitter.setup()
 
     if mnw == nil then
-      treesitter.install(languages)
+      local to_install = {
+        "nix",
+        "rust",
+        "zig",
+        "terraform",
+      }
+      treesitter.install(to_install)
     end
 
     vim.api.nvim_create_autocmd("FileType", {
