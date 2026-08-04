@@ -16,6 +16,7 @@ return {
         version = "LuaJIT",
       },
       diagnostics = {
+        globals = { "mnw" },
         workspaceDelay = -1,
       },
       workspace = {
