@@ -1,0 +1,5 @@
+result
+/.direnv
+/.luarc.json
+/nvim-pack-lock.json
+
