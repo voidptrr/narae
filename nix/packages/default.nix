@@ -35,6 +35,7 @@
                 nix
                 rust
                 zig
+                terraform
               ]
           ))
         ];
