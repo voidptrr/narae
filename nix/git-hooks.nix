@@ -1,0 +1,11 @@
+{inputs, ...}: {
+  imports = [inputs.git-hooks.flakeModule];
+
+  perSystem.pre-commit = {
+    check.enable = true;
+    settings.hooks = {
+      alejandra.enable = true;
+      stylua.enable = true;
+    };
+  };
+}
