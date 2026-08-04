@@ -3,22 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    flake-parts = {
-      type = "github";
-      owner = "hercules-ci";
-      repo = "flake-parts";
-      inputs.nixpkgs-lib.follows = "nixpkgs";
-    };
-    import-tree = {
-      type = "github";
-      owner = "vic";
-      repo = "import-tree";
-    };
-    systems = {
-      type = "github";
-      owner = "nix-systems";
-      repo = "default";
-    };
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    flake-parts.inputs.nixpkgs-lib.follows = "nixpkgs";
+    import-tree.url = "github:vic/import-tree";
+    systems.url = "github:nix-systems/default";
     mnw.url = "github:Gerg-L/mnw";
   };
 
