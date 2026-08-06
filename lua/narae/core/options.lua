@@ -19,10 +19,6 @@ opt.cmdheight = 0 -- single line command line
 opt.completeopt = "menuone,noinsert,noselect" -- completion options
 opt.showmode = false -- do not show the mode, instead have it in statusline
 opt.pumheight = 10 -- popup menu height
-opt.pumblend = 10 -- popup menu transparency
-opt.winblend = 0 -- floating window transparency
---opt.conceallevel = 2 -- obsidian requirement
-opt.concealcursor = "" -- do not hide cursorline in markup
 opt.synmaxcol = 300 -- syntax highlighting limit
 opt.fillchars = { eob = " " } -- hide "~" on empty lines
 opt.splitbelow = true
@@ -48,7 +44,3 @@ opt.selection = "inclusive" -- include last char in selection
 opt.mouse = "a" -- enable mouse support
 opt.clipboard:append("unnamedplus") -- use system clipboard
 opt.modifiable = true -- allow buffer modifications
-
-opt.foldmethod = "expr" -- use expression for folding
-opt.foldexpr = "v:lua.vim.treesitter.foldexpr()" -- use treesitter for folding
-opt.foldlevel = 99 -- start with all folds open

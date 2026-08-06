@@ -5,5 +5,4 @@ require("narae.core.options")
 require("narae.core.keymaps")
 require("narae.core.colorscheme")
 
-require("narae.plugins.git")
-require("narae.plugins.treesitter")
+require("narae.core.loader").load()
