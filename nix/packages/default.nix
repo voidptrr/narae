@@ -1,7 +1,7 @@
 {inputs, ...}: {
   perSystem = {pkgs, ...}: {
     packages.default = inputs.mnw.lib.wrap {inherit pkgs;} {
-      appName = "nvim";
+      appName = "narae";
 
       initLua = builtins.readFile ../../init.lua;
 
@@ -15,31 +15,20 @@
             ../../lua
           ];
         };
-        impure = "/home/voidptr/git/nvim-config";
+        impure = "/home/voidptr/git/narae";
       };
 
       plugins.start = with pkgs.vimPlugins; [
-        lazy-nvim
+        vim-fugitive
+        (nvim-treesitter.withPlugins (p:
+          with p; [
+            cpp
+            nix
+            rust
+            zig
+          ]))
       ];
-
-      plugins.opt =
-        (with pkgs.vimPlugins; [
-          blink-cmp
-          lualine-nvim
-          nightfox-nvim
-          oil-nvim
-        ])
-        ++ [
-          (pkgs.vimPlugins.nvim-treesitter.withPlugins (
-            parsers:
-              with parsers; [
-                nix
-                rust
-                zig
-                terraform
-              ]
-          ))
-        ];
+      plugins.opt = [];
     };
   };
 }

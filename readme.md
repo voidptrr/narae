@@ -1,4 +1,4 @@
-# nvim-config
+# narae
 
 Lua-first Neovim config that can run directly from `~/.config/nvim` or as a Nix-wrapped package.
 

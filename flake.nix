@@ -1,5 +1,5 @@
 {
-  description = "voidptr Neovim config";
+  description = "narae";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
