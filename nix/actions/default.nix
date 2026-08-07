@@ -20,7 +20,9 @@
             branches = ["main"];
             paths = [
               "**.nix"
+              "**.lua"
               "flake.lock"
+              "stylua.toml"
               ".github/workflows/checks.yml"
             ];
           };
