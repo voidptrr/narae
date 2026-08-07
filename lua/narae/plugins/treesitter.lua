@@ -24,7 +24,10 @@ return {
 
     if mnw == nil then
       require("nvim-treesitter").setup()
-      require("nvim-treesitter").install(parsers)
+
+      if vim.fn.executable("tree-sitter") == 1 then
+        require("nvim-treesitter").install(parsers)
+      end
     end
 
     vim.api.nvim_create_autocmd("FileType", {

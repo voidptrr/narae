@@ -1,4 +1,4 @@
-# narae (나래 · [나래] · /na.ɾɛ/)
+# narae
 
 **나래** *n.* wing; wings.
 
@@ -14,7 +14,8 @@ nvim
 
 This path uses Neovim's built-in `vim.pack` support for plugins. External
 commands such as `git`, compilers, formatters, search tools, and language
-servers must already be available on the device.
+servers must already be available on the device. Treesitter parser installation
+also needs the `tree-sitter` command.
 
 ## Nix use
 

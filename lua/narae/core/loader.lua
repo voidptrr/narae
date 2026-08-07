@@ -40,7 +40,7 @@ function M.load()
     local plugin = require(module)
 
     if mnw == nil then
-      vim.pack.add({ plugin.repo })
+      vim.pack.add({ { src = plugin.repo } })
     end
 
     if plugin.setup ~= nil then
