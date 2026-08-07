@@ -12,10 +12,10 @@ opt.smartcase = true -- case sensitive if uppercase in string
 opt.hlsearch = true -- highlight search matches
 opt.incsearch = true -- show matches as you type
 
-opt.laststatus = 3
+opt.laststatus = 3 -- use one global statusline across splits
 opt.signcolumn = "yes" -- always show a sign column
 --opt.colorcolumn = "100" -- show a column at 100 position chars
-opt.cmdheight = 0 -- single line command line
+opt.cmdheight = 1 -- single line command line
 opt.completeopt = "menuone,noinsert,noselect" -- completion options
 opt.showmode = false -- do not show the mode, instead have it in statusline
 opt.pumheight = 10 -- popup menu height

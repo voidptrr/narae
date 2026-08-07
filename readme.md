@@ -1,6 +1,9 @@
-# narae
+# narae (나래 · [나래] · /na.ɾɛ/)
 
-Lua-first Neovim config that can run directly from `~/.config/nvim` or as a Nix-wrapped package.
+**나래** *n.* wing; wings.
+
+Lua-first Neovim config that can run directly from `~/.config/nvim` or as a
+Nix-wrapped package.
 
 ## Direct use
 
@@ -9,7 +12,9 @@ git clone <repo> ~/.config/nvim
 nvim
 ```
 
-This path bootstraps `lazy.nvim` and lets Lazy install plugins. External commands such as `git`, compilers, formatters, search tools, and language servers must already be available on the device.
+This path uses Neovim's built-in `vim.pack` support for plugins. External
+commands such as `git`, compilers, formatters, search tools, and language
+servers must already be available on the device.
 
 ## Nix use
 
@@ -17,6 +22,6 @@ This path bootstraps `lazy.nvim` and lets Lazy install plugins. External command
 nix run .
 ```
 
-The flake wraps Neovim with `mnw` and provides Lazy plus plugins through Nix. In this mode the config still calls Lazy, but Lazy resolves plugins from `mnw.configDir`.
-
-External executables are intentionally not bundled by this flake. If a device or project needs `git`, `fd`, `ripgrep`, `stylua`, language servers, or compiler toolchains, provide them in that system profile, Home Manager config, or project shell.
+The flake wraps Neovim with `mnw` and provides the configured plugins through
+Nix. In this mode the config sees `mnw` and skips `vim.pack` plugin
+installation.
