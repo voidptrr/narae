@@ -40,6 +40,16 @@ opt.backspace = "indent,eol,start" -- better backspace behaviour
 opt.autochdir = false -- do not autochange directories
 opt.iskeyword:append("-") -- include - in words
 opt.path:append("**") -- include subdirs in search
+opt.wildignore:append({
+  "*/node_modules/*",
+  "*/target/*",
+  "*/zig-cache/*",
+  "*/zig-out/*",
+  "*/build/*",
+  "*/cmake-build-*/*",
+  "*/CMakeFiles/*",
+  "*/compile_commands.json",
+}) -- skip generated files and dirs in file search
 opt.selection = "inclusive" -- include last char in selection
 opt.mouse = "a" -- enable mouse support
 opt.clipboard:append("unnamedplus") -- use system clipboard
