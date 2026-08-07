@@ -2,6 +2,7 @@ local parsers = {
   "cpp",
   "nix",
   "rust",
+  "terraform",
   "zig",
 }
 
@@ -11,6 +12,7 @@ local filetypes = {
   "lua",
   "nix",
   "rust",
+  "tf",
   "zig",
 }
 
@@ -30,10 +32,12 @@ return {
       end
     end
 
+    vim.treesitter.language.register("terraform", "tf")
+
     vim.api.nvim_create_autocmd("FileType", {
       pattern = filetypes,
-      callback = function()
-        pcall(vim.treesitter.start)
+      callback = function(args)
+        pcall(vim.treesitter.start, args.buf)
       end,
     })
   end,

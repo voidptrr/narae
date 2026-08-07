@@ -25,6 +25,7 @@
             cpp
             nix
             rust
+            terraform
             zig
           ]))
       ];

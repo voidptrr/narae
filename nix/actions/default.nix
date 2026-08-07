@@ -26,7 +26,6 @@
               ".github/workflows/checks.yml"
             ];
           };
-          workflow_dispatch = {};
         };
 
         jobs.flake = {
