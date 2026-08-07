@@ -19,8 +19,8 @@
           push = {
             branches = ["main"];
             paths = [
-              "**.nix"
-              "**.lua"
+              "**/*.nix"
+              "**/*.lua"
               "flake.lock"
               "stylua.toml"
               ".github/workflows/checks.yml"
