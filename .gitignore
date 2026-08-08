@@ -2,4 +2,4 @@
 result
 .pre-commit-config.yaml
 .luarc.json
-/nvim-pack-lock.json
+nvim-pack-lock.json
