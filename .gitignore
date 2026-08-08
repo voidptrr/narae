@@ -1,5 +1,5 @@
+.DS_Store
 result
-/.direnv
-/.pre-commit-config.yaml
-/.luarc.json
+.pre-commit-config.yaml
+.luarc.json
 /nvim-pack-lock.json
