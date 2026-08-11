@@ -56,14 +56,9 @@ function M.setup()
     end,
   })
 
-  local init = vim.api.nvim_get_runtime_file("lua/narae/init.lua", false)[1]
-  local root = init ~= nil and vim.fs.dirname(vim.fs.dirname(vim.fs.dirname(init))) or nil
-  local files = root ~= nil and vim.fn.glob(root .. "/lsp/*.lua", false, true) or {}
+  local servers = { "clangd", "lua_ls", "rust_analyzer", "zls" }
 
-  table.sort(files)
-
-  for _, file in ipairs(files) do
-    local name = vim.fn.fnamemodify(file, ":t:r")
+  for _, name in ipairs(servers) do
     local config = vim.lsp.config[name]
     local cmd = config ~= nil and config.cmd or nil
     local executable = true
