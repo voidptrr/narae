@@ -26,3 +26,10 @@ nix run .
 The flake wraps Neovim with `mnw` and provides the configured plugins through
 Nix. In this mode the config sees `mnw` and skips `vim.pack` plugin
 installation.
+
+## LSP
+
+LSP configs live in `lsp/*.lua` and are enabled only when their server command
+exists on `PATH`. Install language servers on the device, system profile, or
+project shell as needed: `clangd`, `lua-language-server`, `rust-analyzer`, and
+`zls`.
