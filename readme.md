@@ -29,6 +29,7 @@ installation.
 
 ## LSP
 
-LSP configs live in `lsp/*.lua` and are enabled only when their server command
-exists on `PATH`. Install language servers on the device, system profile, or
-project shell as needed
+Languages are listed in `lua/narae/core/language.lua`, including filetypes,
+Treesitter parsers, and LSP server names. LSP configs live in `lsp/*.lua` and
+are enabled only when their server command exists on `PATH`. Install language
+servers on the device, system profile, or project shell as needed.

@@ -1,5 +1,7 @@
 local opt = vim.opt
 
+vim.g.c_syntax_for_h = 1 -- treat .h headers as C files
+
 opt.number = true -- line number
 opt.relativenumber = true -- relative line numbers
 opt.cursorline = true -- highlight current line

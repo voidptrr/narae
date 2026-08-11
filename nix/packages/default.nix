@@ -26,6 +26,8 @@
             nix
             rust
             terraform
+            tsx
+            typescript
             zig
           ]))
       ];

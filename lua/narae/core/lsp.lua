@@ -1,4 +1,5 @@
 local M = {}
+local language = require("narae.core.language")
 
 function M.setup()
   vim.diagnostic.config({
@@ -56,9 +57,7 @@ function M.setup()
     end,
   })
 
-  local servers = { "clangd", "lua_ls", "rust_analyzer", "zls" }
-
-  for _, name in ipairs(servers) do
+  for _, name in ipairs(language.lsp_servers) do
     local config = vim.lsp.config[name]
     local cmd = config ~= nil and config.cmd or nil
     local executable = true

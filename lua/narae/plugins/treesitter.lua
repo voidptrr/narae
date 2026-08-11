@@ -1,20 +1,4 @@
-local parsers = {
-  "cpp",
-  "nix",
-  "rust",
-  "terraform",
-  "zig",
-}
-
-local filetypes = {
-  "c",
-  "cpp",
-  "lua",
-  "nix",
-  "rust",
-  "tf",
-  "zig",
-}
+local language = require("narae.core.language")
 
 ---@type NaraePlugin
 return {
@@ -28,14 +12,16 @@ return {
       require("nvim-treesitter").setup()
 
       if vim.fn.executable("tree-sitter") == 1 then
-        require("nvim-treesitter").install(parsers)
+        require("nvim-treesitter").install(language.treesitter_parsers)
       end
     end
 
-    vim.treesitter.language.register("terraform", "tf")
+    for _, alias in ipairs(language.treesitter_aliases) do
+      vim.treesitter.language.register(alias.parser, alias.filetype)
+    end
 
     vim.api.nvim_create_autocmd("FileType", {
-      pattern = filetypes,
+      pattern = language.filetypes,
       callback = function(args)
         pcall(vim.treesitter.start, args.buf)
       end,
