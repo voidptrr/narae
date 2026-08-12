@@ -23,7 +23,7 @@ function M.setup()
       local client = vim.lsp.get_client_by_id(args.data.client_id)
 
       if client ~= nil then
-        client.server_capabilities.semanticTokensProvider = nil
+        --client.server_capabilities.semanticTokensProvider = nil
 
         if client:supports_method("textDocument/completion") then
           vim.bo[args.buf].omnifunc = "v:lua.vim.lsp.omnifunc"

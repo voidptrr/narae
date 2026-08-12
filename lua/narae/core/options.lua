@@ -24,12 +24,16 @@ opt.pumheight = 10 -- popup menu height
 opt.synmaxcol = 300 -- syntax highlighting limit
 opt.fillchars = { eob = " " } -- hide "~" on empty lines
 opt.splitbelow = true
+opt.tabstop = 4 -- tab width
+opt.softtabstop = 4 -- editing tab width
+opt.shiftwidth = 4 -- indent width
+opt.expandtab = true -- use spaces instead of tabs
 
 opt.backup = false -- do not create a backup file
 opt.writebackup = false -- do not write to a backup file
 opt.swapfile = false -- do not create a swapfile
 opt.undofile = true -- do create an undo file
-opt.undodir = undodir -- set the undo directory
+opt.undodir = "undodir" -- set the undo directory
 opt.updatetime = 300 -- faster completion
 opt.timeoutlen = 500 -- timeout duration
 opt.ttimeoutlen = 50 -- key code timeout
