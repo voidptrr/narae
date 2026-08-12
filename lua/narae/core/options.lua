@@ -32,7 +32,6 @@ opt.expandtab = true -- use spaces instead of tabs
 opt.backup = false -- do not create a backup file
 opt.writebackup = false -- do not write to a backup file
 opt.swapfile = false -- do not create a swapfile
-opt.undofile = true -- do create an undo file
 opt.updatetime = 300 -- faster completion
 opt.timeoutlen = 500 -- timeout duration
 opt.ttimeoutlen = 50 -- key code timeout
