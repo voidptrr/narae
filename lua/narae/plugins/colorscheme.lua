@@ -3,6 +3,7 @@ return {
   repo = "https://github.com/rebelot/kanagawa.nvim",
   setup = function()
     require("kanagawa").setup({
+      transparent = true,
       colors = {
         theme = {
           all = {
