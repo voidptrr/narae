@@ -1,11 +1,6 @@
 local M = {}
 local language = require("narae.core.language")
 
-local function has_c_highlights(bufnr)
-  local extension = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(bufnr), ":e"):lower()
-  return extension == "c" or extension == "h"
-end
-
 function M.setup()
   vim.diagnostic.config({
     signs = {
@@ -28,7 +23,7 @@ function M.setup()
       local client = vim.lsp.get_client_by_id(args.data.client_id)
 
       if client ~= nil then
-        vim.lsp.semantic_tokens.enable(has_c_highlights(args.buf), { bufnr = args.buf })
+        vim.lsp.semantic_tokens.enable(false)
 
         if client:supports_method("textDocument/completion") then
           vim.bo[args.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
