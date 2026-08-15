@@ -19,6 +19,7 @@
       };
 
       plugins.start = with pkgs.vimPlugins; [
+        kanagawa-nvim
         vim-fugitive
         (nvim-treesitter.withPlugins (p:
           with p; [
