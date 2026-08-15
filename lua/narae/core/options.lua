@@ -21,6 +21,8 @@ opt.cmdheight = 1 -- single line command line
 opt.completeopt = "menuone,noinsert,noselect,popup" -- completion options
 opt.showmode = false -- do not show the mode, instead have it in statusline
 opt.pumheight = 10 -- popup menu height
+opt.pumborder = "single" -- popup menu border style
+opt.winborder = "single" -- floating window border style
 opt.synmaxcol = 300 -- syntax highlighting limit
 opt.fillchars = { eob = " " } -- hide "~" on empty lines
 opt.splitbelow = true

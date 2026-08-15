@@ -22,6 +22,8 @@ function M.setup()
     callback = function(args)
       local client = vim.lsp.get_client_by_id(args.data.client_id)
 
+      vim.lsp.document_color.enable(false, { bufnr = args.buf })
+
       if client ~= nil then
         vim.lsp.semantic_tokens.enable(false)
 
@@ -33,7 +35,13 @@ function M.setup()
 
       local opts = { buffer = args.buf }
       local maps = {
-        { "K", vim.lsp.buf.hover, "hover documentation" },
+        {
+          "K",
+          function()
+            vim.lsp.buf.hover({ border = "single" })
+          end,
+          "hover documentation",
+        },
         { "<leader>gd", vim.lsp.buf.definition, "go to definition" },
         { "<leader>gD", vim.lsp.buf.declaration, "go to declaration" },
         { "<leader>gi", vim.lsp.buf.implementation, "go to implementation" },
