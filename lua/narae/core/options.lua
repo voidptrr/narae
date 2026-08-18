@@ -48,6 +48,12 @@ opt.iskeyword:append("-") -- include - in words
 opt.path:append("**") -- include subdirs in search
 opt.wildignore:append({
   "*/node_modules/*",
+  "*/__pycache__/*",
+  "*/.venv/*",
+  "*/venv/*",
+  "*/.pytest_cache/*",
+  "*/.mypy_cache/*",
+  "*/.ruff_cache/*",
   "*/target/*",
   "*/zig-cache/*",
   "*/zig-out/*",

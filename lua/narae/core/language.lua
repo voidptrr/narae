@@ -21,6 +21,12 @@ local languages = {
     parser = "nix",
   },
   {
+    name = "python",
+    filetypes = { "python" },
+    parser = "python",
+    lsp = "pyright",
+  },
+  {
     name = "rust",
     filetypes = { "rust" },
     parser = "rust",

@@ -30,6 +30,7 @@
             tsx
             typescript
             zig
+            python
           ]))
       ];
       plugins.opt = [];
