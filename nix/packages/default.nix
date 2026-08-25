@@ -19,7 +19,7 @@
       };
 
       plugins.start = with pkgs.vimPlugins; [
-        kanagawa-nvim
+        gruvbox-material
         vim-fugitive
         (nvim-treesitter.withPlugins (p:
           with p; [

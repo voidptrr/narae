@@ -35,13 +35,7 @@ function M.setup()
 
       local opts = { buffer = args.buf }
       local maps = {
-        {
-          "K",
-          function()
-            vim.lsp.buf.hover({ border = "single" })
-          end,
-          "hover documentation",
-        },
+        { "K", vim.lsp.buf.hover, "hover documentation" },
         { "<leader>gd", vim.lsp.buf.definition, "go to definition" },
         { "<leader>gD", vim.lsp.buf.declaration, "go to declaration" },
         { "<leader>gi", vim.lsp.buf.implementation, "go to implementation" },

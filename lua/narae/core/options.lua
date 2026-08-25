@@ -20,10 +20,10 @@ opt.signcolumn = "yes" -- always show a sign column
 --opt.colorcolumn = "100" -- show a column at 100 position chars
 opt.cmdheight = 1 -- single line command line
 opt.completeopt = "menuone,noinsert,noselect,popup" -- completion options
+opt.pumborder = "single"
+opt.winborder = "single"
 opt.showmode = false -- do not show the mode, instead have it in statusline
 opt.pumheight = 10 -- popup menu height
-opt.pumborder = "single" -- popup menu border style
-opt.winborder = "single" -- floating window border style
 opt.synmaxcol = 300 -- syntax highlighting limit
 opt.fillchars = { eob = " " } -- hide "~" on empty lines
 opt.splitbelow = true
