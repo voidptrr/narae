@@ -20,6 +20,7 @@
 
       plugins.start = with pkgs.vimPlugins; [
         gruvbox-material
+        black-metal-theme-neovim
         vim-fugitive
         (nvim-treesitter.withPlugins (p:
           with p; [
