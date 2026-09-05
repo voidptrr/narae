@@ -19,7 +19,7 @@
       };
 
       plugins.start = with pkgs.vimPlugins; [
-        black-metal-theme-neovim
+        everforest
         vim-fugitive
         (nvim-treesitter.withPlugins (p:
           with p; [
