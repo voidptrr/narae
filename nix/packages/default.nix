@@ -20,6 +20,7 @@
 
       plugins.start = with pkgs.vimPlugins; [
         everforest
+        lualine-nvim
         vim-fugitive
         (nvim-treesitter.withPlugins (p:
           with p; [
